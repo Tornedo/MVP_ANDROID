@@ -50,7 +50,7 @@ public class HomeFragment extends BaseFragment {
 
     private void sendMessage() {
         if (binding.message.getText().toString().isEmpty()){
-            showToast("message is empty");
+            showToast(getString(R.string.empty_message_error));
         }else{
             showProcessing();
             MessageSendRequest messageSendRequest = new MessageSendRequest();
@@ -83,9 +83,9 @@ public class HomeFragment extends BaseFragment {
         public void onResponse(Call<GeneralResponse> call, Response<GeneralResponse> response) {
             Log.e("response code ", response.code() + "");
             if (response.isSuccess()) {
-               onSuccess("message send");
+               onSuccess(getString(R.string.message_successPmessage));
             } else {
-                onError("Username or password is wrong");
+                onError(getString(R.string.generic_error));
             }
         }
 

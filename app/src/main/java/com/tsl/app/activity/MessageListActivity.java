@@ -69,7 +69,7 @@ public class MessageListActivity extends BaseActivity {
                 setupRecycleListView();
             } else {
                 try {
-                    showToast("Something went wrong please try again");
+                    showToast(getString(R.string.generic_error));
 
                 } catch (Exception e) {
 
@@ -81,7 +81,7 @@ public class MessageListActivity extends BaseActivity {
         public void onFailure(Call<ArrayList<MessageListResponse>> call, Throwable t) {
             hideProcessing();
             Log.e(TAG + "", t.getMessage(), t);
-            showToast("Something went wrong please try again");
+            showToast(getString(R.string.generic_error));
         }
     };
 

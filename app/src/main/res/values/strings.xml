@@ -7,4 +7,13 @@
     <string name="message_list">Messages</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="error">Error</string>
+    <string name="user_exist_error">Something went wrong or username is used</string>
+    <string name="user_create_message">\"User Created, Your user name is \"</string>
+    <string name="user_name_empty">Username cannot be empty</string>
+    <string name="password_empty">Password cannot be empty</string>
+    <string name="login_error">Username or password is wrong</string>
+    <string name="generic_error">Something went wrong please try again</string>
+    <string name="empty_message_error">message is empty</string>
+    <string name="message_successPmessage">message send</string>
 </resources>

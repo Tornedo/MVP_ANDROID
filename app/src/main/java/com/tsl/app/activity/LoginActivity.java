@@ -112,12 +112,12 @@ public class LoginActivity extends BaseActivity implements
 
         // validate username
         if (valid && username.isEmpty()) {
-            binding.loginUsername.setError("Username cannot be empty");
+            binding.loginUsername.setError(getString(R.string.user_name_empty));
             valid = false;
         }
         // validate password
         if (valid && password.isEmpty()) {
-            binding.loginPassword.setError("Password cannot be empty");
+            binding.loginPassword.setError(getString(R.string.password_empty));
             valid = false;
         }
 
@@ -162,7 +162,7 @@ public class LoginActivity extends BaseActivity implements
             if (response.isSuccess()) {
                 onSuccess(getString(R.string.success));
             } else {
-                onError("Username or password is wrong");
+                onError(getString(R.string.login_error));
             }
         }
 

@@ -93,7 +93,7 @@ public class SignupActivity extends BaseActivity implements BaseView {
     @Override
     public void onSuccess(Object data) {
         hideProcessing();
-        showAlert("", data.toString(), new AlertCallback() {
+        showAlert("Success", data.toString(), new AlertCallback() {
             @Override
             public void run() {
                 finish();
@@ -112,9 +112,10 @@ public class SignupActivity extends BaseActivity implements BaseView {
         public void onResponse(Call<GeneralResponse> call, Response<GeneralResponse> response) {
             GeneralResponse data = response.body();
             if (response.isSuccess()) {
-                onSuccess("User Created, Your user name is " + data.getUsername());
+                onSuccess(getString(R.string.user_create_message)+" " + data.getUsername());
             } else {
-                onError(data.getStatus());
+                hideProcessing();
+                showAlert(getString(R.string.error),getString(R.string.user_exist_error));
             }
         }
 
