@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- My colors : which are using, use limited number of color combination -->
+    <color name="text_color">@android:color/white</color>
+    <!-- DodgerBlue : 1E90FF  -->
+    <color name="button_text_color">@color/text_color</color>
+
+    <color name="colorPrimary">#283590</color>
+    <color name="colorPrimaryDark">#28358E</color>
+    <color name="colorAccent">#28358E</color>
+
+    <!-- 4. F37127, CD4900, F37127, #404040: red theme -->
+    <!-- 3. 28358E, 28358E, 28358E : blue theme -->
+    <!-- 2. F38E32, EE6934, EC5A35 : light blue theme -->
+    <!-- 1. 00AEFF, 0095DA, 00AEFF -->
+
+    <!-- End my color  -->
+
+    <!-- try to avoid following color, use @android:color instead of following values -->
+
+    <color name="White">#FFFFFF</color>
+    <color name="DarkGray">#A9A9A9</color>
+
+
+</resources>

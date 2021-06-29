@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aigestudio="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.tsl.app.fragment.HomeFragment">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appbar"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_normal"
+                android:paddingTop="@dimen/spacing_normal"
+                android:paddingRight="@dimen/spacing_normal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/description_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Type your message"
+                        android:imeOptions="actionDone"
+
+                        android:inputType="text"
+                        android:maxLength="255" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <LinearLayout
+                    android:id="@+id/task_panel_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/spacing_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/sendMessageClicked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_border"
+                        android:paddingLeft="@dimen/spacing_normal"
+                        android:paddingRight="@dimen/spacing_normal"
+                        android:text="Send Message"
+                        android:textColor="#393ca1"
+                        android:textSize="@dimen/font_large"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

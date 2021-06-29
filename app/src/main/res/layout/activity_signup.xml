@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ufril.activity.tsl.SignupActivity"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#10000000"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/AppTheme.NoActionBar.AppBarOverlay"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
+            app:title="Sign Up"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true"
+            android:paddingLeft="@dimen/spacing_normal"
+            android:paddingRight="@dimen/spacing_normal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/form_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/signup_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Username"
+                            android:inputType="text"
+
+                            android:maxLength="50"
+                            android:textSize="@dimen/font_normal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="User name"
+                            android:maxLength="100"
+                            android:textSize="@dimen/font_normal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/signup_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:maxLength="255"
+                            android:textSize="@dimen/font_normal" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/buttons_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <Button
+                        android:id="@+id/signup_btn_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_normal"
+                        android:background="@drawable/uf_button"
+                        android:gravity="center"
+                        android:onClick="onClickSignup"
+                        android:text="Submit"
+                        android:textColor="@color/button_text_color"
+                        android:textSize="@dimen/font_large" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signup_btn_register"
+                        android:layout_marginBottom="@dimen/spacing_normal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/signup_label_have_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_normal"
+                            android:layout_marginLeft="@dimen/spacing_normal"
+                            android:hint="Already have an account?  "
+                            android:textSize="@dimen/font_normal" />
+
+                        <TextView
+                            android:id="@+id/signup_label_signin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/signup_label_have_account"
+                            android:layout_toEndOf="@+id/signup_label_have_account"
+                            android:layout_toRightOf="@+id/signup_label_have_account"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:onClick="onClickSignIn"
+                            android:text="Sign In"
+                            android:textSize="@dimen/font_normal" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>
